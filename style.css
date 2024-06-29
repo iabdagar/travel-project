@@ -412,4 +412,12 @@ nav {
     font-size: 14px;
     color: #7d7c7c;
   }
+
+  .about h3 {
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px auto;
+    letter-spacing: 1.5px;
+  }
 }
