@@ -20,15 +20,16 @@
 <body>
     <!---------------------- Header part ---------------------->
     <div class="header">
-        <nav class="nav_links">
+        <nav id="nav_bar">
             <img src="./images/logo.png" alt="logo" class="logo">
-            <ul>
-                <li><a href="#">Explore Places</a></li>
+            <ul class="nav_links">
+                <li><a href="#" class="active">Explore Places</a></li>
                 <li><a href="#">Popular Palces</a></li>
                 <li><a href="#">Packages</a></li>
             </ul>
             <p class="register_btn">
                 <a href="#">Register Now</a>
+                <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
             </p>
         </nav>
 
@@ -213,7 +214,13 @@
 
         </div>
     </footer>
+    <script>
+        let navBar = document.getElementById("nav_bar");
+        function togglebtn() {
+            navBar.classList.toggle("hide_menu")
+        }
 
+    </script>
 
 </body>
 

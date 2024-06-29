@@ -19,7 +19,7 @@
   background-position: center;
 }
 
-.nav_links {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,9 +42,20 @@
   color: #fff;
 }
 
-.nav_links li a:hover {
-  text-decoration: underline;
-  text-underline-offset: 0.75rem;
+.active {
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  background-color: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 2px;
 }
 
 .register_btn a {
@@ -54,6 +65,10 @@
   padding: 8px 20px;
   border-radius: 25px;
   font-size: 14px;
+}
+
+.nav_links .register_btn .fa-bars {
+  display: none;
 }
 
 .header h1 {
@@ -191,7 +206,7 @@
 .sharing_text {
   font-size: 14px;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 25px;
 }
 
 .share_property button {
@@ -297,4 +312,104 @@
   height: 1px;
   width: 100%;
   margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    position: fixed;
+    top: 5%;
+    left: 7%;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 7% 0;
+    z-index: 100;
+    background-color: #000;
+    text-align: right;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+
+  nav .nav_links li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .register_btn {
+    margin: 10px 0 30px;
+    display: inline-block;
+  }
+
+  nav .fa-bars {
+    display: block;
+    color: #fff;
+    position: fixed;
+    top: 8%;
+    right: 8%;
+  }
+
+  .active::after {
+    left: -40px;
+    transform: translate(0, 50%);
+    bottom: 50%;
+  }
+
+  .hide_menu {
+    max-height: 300px;
+  }
+
+  .header h1 {
+    padding-top: 200px;
+    font-size: 1.75rem;
+  }
+
+  .search_box {
+    position: relative;
+    width: 90%;
+    padding: 20px 10px 25px;
+    margin: 30px auto;
+    border-radius: 5px;
+  }
+
+  .search_box form {
+    display: block;
+  }
+
+  .search_box form input {
+    width: 100%;
+    border-bottom: 1px solid #7d7c7c;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    padding-bottom: 10px;
+  }
+
+  .search_box form button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+
+  .share_property .sharing_title {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0 0 20px;
+  }
+
+  .share_property .sharing_text {
+    font-size: 0.75rem;
+    margin: 0 0 25px;
+  }
+
+  .about div p {
+    text-align: justify;
+    line-height: 25px;
+    font-size: 14px;
+    color: #7d7c7c;
+  }
 }
