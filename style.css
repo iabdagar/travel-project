@@ -42,6 +42,11 @@
   color: #fff;
 }
 
+.nav_links li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+}
+
 .register_btn a {
   background-color: #ff5361;
   color: #fff;
