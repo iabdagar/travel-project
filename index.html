@@ -20,9 +20,9 @@
 <body>
     <!---------------------- Header part ---------------------->
     <div class="header">
-        <nav id="nav_bar">
+        <nav class="nav_links" id="nav_bar">
             <img src="./images/logo.png" alt="logo" class="logo">
-            <ul class="nav_links">
+            <ul>
                 <li><a href="#" class="active">Explore Places</a></li>
                 <li><a href="#">Popular Palces</a></li>
                 <li><a href="#">Packages</a></li>
@@ -197,18 +197,23 @@
 
     <!-- -------------------- footer -------------------- -->
     <footer class="footer">
-        <div class="social_links">
-            <div>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <div>
+
+            <div class="social_links">
+                <div>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+
+                <hr>
+
+                <p class="copy_right">Copyright &copy; 2022 Staybnb. All rights reserved.</p>
             </div>
-            <hr>
-            <p class="copy_right">Copyright &copy; 2022 Staybnb. All rights reserved.</p>
+
         </div>
     </footer>
-
     <script>
         let navBar = document.getElementById("nav_bar");
         function togglebtn() {

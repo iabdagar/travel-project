@@ -19,7 +19,7 @@
   background-position: center;
 }
 
-nav {
+.nav_links {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +45,6 @@ nav {
 .active {
   position: relative;
 }
-
 .active::after {
   content: "";
   background-color: #fff;
@@ -67,7 +66,7 @@ nav {
   font-size: 14px;
 }
 
-.fa-bars {
+.nav_links .register_btn .fa-bars {
   display: none;
 }
 
@@ -206,7 +205,7 @@ nav {
 .sharing_text {
   font-size: 14px;
   font-weight: 400;
-  margin: 0 0 25px;
+  margin: 0 0 20px;
 }
 
 .share_property button {
@@ -280,6 +279,7 @@ nav {
   font-weight: 300;
   text-align: center;
   margin: 10px auto;
+  letter-spacing: 2.5px;
 }
 
 .footer {
@@ -311,126 +311,4 @@ nav {
   height: 1px;
   width: 100%;
   margin: 10px 0;
-}
-
-@media (max-width: 768px) {
-  .logo {
-    position: fixed;
-    top: 5%;
-    left: 7%;
-    width: 100px;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    display: inline-block;
-    width: 100%;
-    max-height: 100px;
-    padding: 100px 7% 0;
-    z-index: 100;
-    background-color: #000;
-    text-align: right;
-    overflow: hidden;
-    transition: max-height 0.5s;
-  }
-
-  nav .nav_links li {
-    display: block;
-    margin: 10px 0;
-  }
-
-  .register_btn {
-    margin: 10px 0 30px;
-    display: inline-block;
-  }
-
-  nav .fa-bars {
-    display: block;
-    color: #fff;
-    position: fixed;
-    top: 6.25%;
-    right: 8%;
-  }
-
-  .active::after {
-    left: -40px;
-    transform: translate(0, 50%);
-    bottom: 50%;
-  }
-
-  .hide_menu {
-    max-height: 300px;
-  }
-
-  .header h1 {
-    padding-top: 200px;
-    font-size: 1.75rem;
-  }
-
-  .search_box {
-    position: relative;
-    width: 90%;
-    padding: 20px 10px 25px;
-    margin: 30px auto;
-    border-radius: 5px;
-  }
-
-  .search_box form {
-    display: block;
-  }
-
-  .search_box form input {
-    width: 100%;
-    border-bottom: 1px solid #7d7c7c;
-    margin-bottom: 20px;
-    margin-top: 5px;
-    padding-bottom: 10px;
-  }
-
-  .search_box form button {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 50%);
-  }
-
-  .share_property .sharing_title {
-    font-size: 1.25rem;
-    font-weight: 500;
-    margin: 0 0 20px;
-  }
-
-  .share_property .sharing_text {
-    font-size: 0.75rem;
-    margin: 0 0 25px;
-  }
-
-  .about div p {
-    text-align: justify;
-    line-height: 25px;
-    font-size: 14px;
-    color: #7d7c7c;
-  }
-
-  .about h3 {
-    font-size: 24px;
-    font-weight: 300;
-    text-align: center;
-    margin: 10px auto;
-  }
-}
-
-/* listing page */
-
-.nav_white {
-  background-color: #fff;
-  box-shadow: 0 0 2px #a3a2a2;
-}
-.nav_white .nav_links li a {
-  color: #7d7c7c;
-}
-
-.nav_white .fa-bars {
-  color: #000;
 }
